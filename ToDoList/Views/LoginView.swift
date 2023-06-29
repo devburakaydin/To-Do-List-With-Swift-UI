@@ -27,7 +27,7 @@ struct LoginView: View {
                         title: "Log In",
                         backGroundColor: .blue
                     ) {
-                        $viewModel.login()
+                        
                     }
                 }
             }
