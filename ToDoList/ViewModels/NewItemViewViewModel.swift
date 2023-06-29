@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class NewIItemViewViewModel: ObservableObject {
+     
+    
+    init(){}
+    
+}

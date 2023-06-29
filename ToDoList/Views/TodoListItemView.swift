@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodoListItemView: View {
+    
+    @StateObject var viewModel = TodoListItemViewViewModel()
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
