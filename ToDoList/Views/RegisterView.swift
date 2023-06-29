@@ -31,7 +31,7 @@ struct RegisterView: View {
                     title: "Create Account",
                     backGroundColor: .green
                 ) {
-                    ///Attempt Registretion
+                    viewModel.register()
                 }
             }
             

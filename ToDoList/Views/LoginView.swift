@@ -12,43 +12,43 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
-        VStack {
-            
-            HeaderView(title: "To Do List", subTitle: "Get Things Done", angle: 15, backGroundColor: .pink)
-            
-            
-            
-            NavigationView {
-                Form {
-                    
-                    if !viewModel.errorMessage.isEmpty {
-                        Text(viewModel.errorMessage).foregroundColor(.red)
-                    }
-                    
-                    TextField("Email Address", text: $viewModel.email)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    TextField("Password", text: $viewModel.password)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    
-                    TLButton(
-                        title: "Log In",
-                        backGroundColor: .blue
-                    ) {
-                        viewModel.login()
-                    }
-                }
-            }
-            
-            
-            
+        NavigationView {
             VStack {
-                Text("New around here ?")
-                NavigationLink("Create An Account", destination: RegisterView())
+                
+                HeaderView(title: "To Do List", subTitle: "Get Things Done", angle: 15, backGroundColor: .pink)
+                
+                
+                
+                    Form {
+                        
+                        if !viewModel.errorMessage.isEmpty {
+                            Text(viewModel.errorMessage).foregroundColor(.red)
+                        }
+                        
+                        TextField("Email Address", text: $viewModel.email)
+                            .textFieldStyle(DefaultTextFieldStyle())
+                        TextField("Password", text: $viewModel.password)
+                            .textFieldStyle(DefaultTextFieldStyle())
+                        
+                        TLButton(
+                            title: "Log In",
+                            backGroundColor: .blue
+                        ) {
+                            viewModel.login()
+                        }
+                    }
+                                
+                
+                
+                VStack {
+                    Text("New around here ?")
+                    NavigationLink("Create An Account", destination: RegisterView())
+                }
+                .padding(.bottom, 50)
+                
+                
+                Spacer()
             }
-            .padding(.bottom, 50)
-            
-            
-            Spacer()
         }
     }
 }
