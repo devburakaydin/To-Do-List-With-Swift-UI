@@ -9,6 +9,7 @@ import Foundation
 
 class TodoListViewModel: ObservableObject {
      
+    @Published var showingNewItemView = false
     
     init(){}
     
