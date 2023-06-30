@@ -12,4 +12,8 @@ class TodoListItemViewViewModel: ObservableObject {
     
     init(){}
     
+    func toggleIsDone(item: TodoListItem){
+        
+    }
+    
 }

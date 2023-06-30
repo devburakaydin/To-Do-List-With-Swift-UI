@@ -13,4 +13,8 @@ class TodoListViewModel: ObservableObject {
     
     init(){}
     
+    func delete(item: TodoListItem) {
+        
+    }
+    
 }
